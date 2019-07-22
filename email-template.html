@@ -57,6 +57,36 @@
     }
 
     /* Allow smoother rendering of resized image in Internet Explorer */
+    /* Add the media query */
+    @media (max-width: 480px) {
+      * {
+        box-sizing: border-box;
+      }
+
+      table,
+      tr,
+      td {
+        width: 100%;
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .social-icons {
+        width: 30px;
+      }
+
+      .observatory-image {
+        margin-bottom: 10px;
+      }
+
+      .displaynone {
+        display: none;
+
+      }
+    }
   </style>
 
 </head>
@@ -72,10 +102,10 @@
             <td>
               <table width="800" border="0" cellspacing="0" cellpadding="10">
                 <tr>
-                  <td width="212">
+                  <td class="displaynone" width="212">
                     <!-- Place your logo in here-->
                   </td>
-                  <td width="137"></td>
+                  <td width="137" class="displaynone"></td>
                   <td width="200"
                     style="align: right; font-family:Arial, Helvetica, sans-serif; color:#25272e; font-size:11px; text-align:right;">
                     <!-- Replace the URL with the "View in Browser" URL provided by your email marketing service-->
@@ -191,7 +221,8 @@
                                   <tr>
                                     <td>
                                       <!-- First Column -->
-                                      <img src="./images/observatory.png" alt="The Griffith Observatory">
+                                      <img class="observatory-image" src="./images/observatory.png"
+                                        alt="The Griffith Observatory">
                                     </td>
                                     <td>
                                       <!-- Second Column -->
@@ -261,11 +292,16 @@
                                     <td width="140" valign="top">
 
 
-                                      <a href="#"><img border="0" src="images/icon-dribbble.png"></a>
-                                      <a href="#"><img border="0" src="images/icon-behance.png"></a>
-                                      <a href="#"><img border="0" src="images/icon-twitter.png"></a>
-                                      <a href="#"><img border="0" src="images/icon-linkedin.png"></a>
-                                      <a href="#"><img border="0" src="images/icon-instagram.png"></a>
+                                      <a href="#"><img border="0" class="social-icons"
+                                          src="images/icon-dribbble.png"></a>
+                                      <a href="#"><img border="0" class="social-icons"
+                                          src="images/icon-behance.png"></a>
+                                      <a href="#"><img border="0" class="social-icons"
+                                          src="images/icon-twitter.png"></a>
+                                      <a href="#"><img border="0" class="social-icons"
+                                          src="images/icon-linkedin.png"></a>
+                                      <a href="#"><img border="0" class="social-icons"
+                                          src="images/icon-instagram.png"></a>
 
                                     </td>
                                   </tr>
